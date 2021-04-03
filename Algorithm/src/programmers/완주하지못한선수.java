@@ -3,7 +3,7 @@ package programmers;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ¿ÏÁÖÇÏÁö¸øÇÑ¼±¼ö {
+public class ì™„ì£¼í•˜ì§€ëª»í•œì„ ìˆ˜{
 	
 	public static void main(String[] args) {
 		
