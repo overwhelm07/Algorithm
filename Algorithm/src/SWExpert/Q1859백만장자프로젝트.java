@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Q1859¹é¸¸ÀåÀÚÇÁ·ÎÁ§Æ® {
+public class Q1859ë°±ë§Œì¥ìí”„ë¡œì íŠ¸ {
 
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	static int[] arr, maxArr, my;
@@ -44,9 +44,9 @@ public class Q1859¹é¸¸ÀåÀÚÇÁ·ÎÁ§Æ® {
 		int n = Integer.parseInt(br.readLine());
 		
 		arr = new int[n];
-		//idx ÀÌÈÄ¿¡ ÀÖ´Â °¡Àå Å« °ªÀ» °®°í ÀÖ´Â ¹è¿­
+		//idx ï¿½ï¿½ï¿½Ä¿ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ Å« ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½è¿­
 		maxArr = new int[n];
-		//³»°¡ °®°í ÀÖ´Â »óÇ°
+		//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½Ç°
 		my = new int[10001];
 		ans = 0;
 		

@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class ºñ¹ĞÁöµµ {
+public class ë¹„ë°€ì§€ë„{
 	static char map[][];
 	static int n;
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

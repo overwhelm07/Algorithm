@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class Q15685µå·¡°ïÄ¿ºê {
+public class Q15685ë“œëž˜ê³¤ì»¤ë¸Œ {
 	
 	static int [][] step = {{-1,0},{0,1},{1,0},{0,-1}};
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -50,9 +50,9 @@ public class Q15685µå·¡°ïÄ¿ºê {
 	
 	private static void makeDragon(ArrayList<Obj> al) {
 	
-		// 0 ¿ì, 1 »ó, 2 ÁÂ, 3 ÇÏ
+		// 0 ï¿½ï¿½, 1 ï¿½ï¿½, 2 ï¿½ï¿½, 3 ï¿½ï¿½
 		/**
-		 * 0 »ó, 1 ¿ì, 2 ÇÏ, 3 ÁÂ 
+		 * 0 ï¿½ï¿½, 1 ï¿½ï¿½, 2 ï¿½ï¿½, 3 ï¿½ï¿½ 
 		 *  
 		 *  0 -> 3	   
 		 *  1 -> 0
@@ -61,10 +61,10 @@ public class Q15685µå·¡°ïÄ¿ºê {
 		 *  
 		 *  (x+3) % 4
 		 *  
-		 *  0¼¼´ë 1¹ø
-		 *  1¼¼´ë 2¹ø
-		 *  2¼¼´ë 4¹ø 
-		 *  3¼¼´ë 8¹ø
+		 *  0ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½
+		 *  1ï¿½ï¿½ï¿½ï¿½ 2ï¿½ï¿½
+		 *  2ï¿½ï¿½ï¿½ï¿½ 4ï¿½ï¿½ 
+		 *  3ï¿½ï¿½ï¿½ï¿½ 8ï¿½ï¿½
 		 */
 		
 		int g = al.get(0).g;
@@ -76,18 +76,18 @@ public class Q15685µå·¡°ïÄ¿ºê {
 				
 		int point = 1;
 		
-		//0¼¼´ë 
+		//0ï¿½ï¿½ï¿½ï¿½ 
 		i+=step[d][0];
 		j+=step[d][1];
 		map[i][j] = true;
 		dir.add(d);
 //		System.out.println(i + " " + j + " " + d);
 		
-		// µå·¡°ï ¼¼´ë
+		// ï¿½å·¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		for(int x=1; x<=g; x++) {
 			int tryPoint = (int)Math.pow(2, x);
 			int dIdx = dir.size()-1;
-//			System.out.println(x+"¼¼´ë!!!");
+//			System.out.println(x+"ï¿½ï¿½ï¿½ï¿½!!!");
 			for(;point<tryPoint; point++) {
 				int dd;
 				
@@ -111,10 +111,10 @@ public class Q15685µå·¡°ïÄ¿ºê {
 		
 		for(int i=1; i<=100; i+=2) {
 			for(int j=0; j<100; j++) {
-				//À§ 
+				//ï¿½ï¿½ 
 				if(map[i][j] && map[i-1][j] && map[i-1][j+1] && map[i][j+1]) ret++;
 				
-				//¾Æ·¡
+				//ï¿½Æ·ï¿½
 				if(map[i][j] && map[i+1][j] && map[i+1][j+1] && map[i][j+1]) ret++;
 			}
 		}
@@ -146,7 +146,7 @@ public class Q15685µå·¡°ïÄ¿ºê {
 			String[] strArr = br.readLine().split(" ");
 			input[i][0] = Integer.parseInt(strArr[1]);
 			input[i][1] = Integer.parseInt(strArr[0]);
-			// 0 ¿ì, 1 »ó, 2 ÁÂ, 3 ÇÏ
+			// 0 ï¿½ï¿½, 1 ï¿½ï¿½, 2 ï¿½ï¿½, 3 ï¿½ï¿½
 			input[i][2] = Integer.parseInt(strArr[2]);
 			switch(input[i][2]) {
 			case 0:

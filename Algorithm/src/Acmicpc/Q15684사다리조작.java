@@ -2,7 +2,7 @@ package Acmicpc;
 
 import java.util.Scanner;
 
-public class Q15684»ç´Ù¸®Á¶ÀÛ {
+public class Q15684ì‚¬ë‹¤ë¦¬ì¡°ìž‘{
 	
 	static Scanner sc = new Scanner(System.in);
 	static boolean map[][];
@@ -26,7 +26,7 @@ public class Q15684»ç´Ù¸®Á¶ÀÛ {
 			return;
 		}
 		
-		//»ç´Ù¸® ¼¼¿ì±â
+		//ï¿½ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
 		rec(0, 1, 0);
 		
 		if(ans == 4) ans = -1;
@@ -34,7 +34,7 @@ public class Q15684»ç´Ù¸®Á¶ÀÛ {
 
 	private static void rec(int depth, int bi, int bj) {
 				
-		//»ç´Ù¸®°¡ ÀÏÄ¡
+		//ï¿½ï¿½Ù¸ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡
 		if(isMatching()) {
 			if(depth < ans) {
 				ans = depth;
@@ -42,7 +42,7 @@ public class Q15684»ç´Ù¸®Á¶ÀÛ {
 			chk = true;
 			return;
 		}
-		//»ç´Ù¸® 3°³±îÁö¸¸ ³Ö±â °¡´É 
+		//ï¿½ï¿½Ù¸ï¿½ 3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö±ï¿½ ï¿½ï¿½ï¿½ï¿½ 
 		if(depth == 3) {
 			return;
 		}
@@ -72,10 +72,10 @@ public class Q15684»ç´Ù¸®Á¶ÀÛ {
 			int i = 1;
 			int tmpJ = j;
 			while(i!=I+1) {
-				//¿ÞÂÊ¿¡ ¼±ÀÌ ÀÖÀ» °æ¿ì 
+				//ï¿½ï¿½ï¿½Ê¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ 
 				if(map[i][tmpJ-1]) {
 					tmpJ--;
-				}//¿À¸¥ÂÊ¿¡ ¼±ÀÌ ÀÖÀ» °æ¿ì
+				}//ï¿½ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 				else if(map[i][tmpJ]) {
 					tmpJ++;
 				}
@@ -91,11 +91,11 @@ public class Q15684»ç´Ù¸®Á¶ÀÛ {
 	private static void input() {
 		ans = 4;
 		
-		//¼¼·Î¼± °³¼ö 2<=N<=10
+		//ï¿½ï¿½ï¿½Î¼ï¿½ ï¿½ï¿½ï¿½ï¿½ 2<=N<=10
 		J = sc.nextInt();
-		//°¡·Î¼± °³¼ö 0<=M<=N*H
+		//ï¿½ï¿½ï¿½Î¼ï¿½ ï¿½ï¿½ï¿½ï¿½ 0<=M<=N*H
 		M = sc.nextInt();
-		//°¡·Î¼± À§Ä¡ °³¼ö 1<=H<=30
+		//ï¿½ï¿½ï¿½Î¼ï¿½ ï¿½ï¿½Ä¡ ï¿½ï¿½ï¿½ï¿½ 1<=H<=30
 		I = sc.nextInt();
 		
 		map = new boolean[I+2][J+2];

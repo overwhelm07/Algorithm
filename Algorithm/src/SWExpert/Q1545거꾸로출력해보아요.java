@@ -2,7 +2,7 @@ package SWExpert;
 
 import java.util.Scanner;
 
-public class Q1545°Å²Ù·ÎÃâ·ÂÇØº¸¾Æ¿ä {
+public class Q1545ê±°ê¾¸ë¡œì¶œë ¥í•´ë³´ì•„ìš” {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Q2805³óÀÛ¹°¼öÈ®ÇÏ±â {
+public class Q2805ë†ì‘ë¬¼ìˆ˜í™•í•˜ê¸° {
 	
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	static int ans, n;
