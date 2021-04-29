@@ -43,7 +43,9 @@ public class 압축 {
 		        		}else {
 		        			answer.add(map.get(str.toString()));
 		        			map.put(newStr, ++lastValueNum);
-		        			System.out.println("add " + newStr + " " + lastValueNum);
+		        			
+		        			//System.out.println("add " + newStr + " " + lastValueNum);
+		        			
 		        			str = new StringBuilder("");
 		        			break;
 		        		}
