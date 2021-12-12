@@ -2,118 +2,76 @@ package Kakao;
 
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 import java.util.Set;
 
 public class 후보키 {
 
 	public static void main(String[] args) {
 		class Solution {
+
+			int row = 0, col = 0;
 			/**
 			 * 후보키 조건: 유일성, 최소성 
 			 * @param relation
 			 * @return
 			 */
-			static final int MAX_COL = 8;
-			String[][] RELATION;
-			int count[] = new int[MAX_COL+1];
-			int row, col;
-			
-			class Info{
-				List <Integer> sel;
-				int ans;
-				Set<String> set = new HashSet<>();
+			public int solution(String[][] strings) {
+				row = strings.length;
+				col = strings[0].length;
 				
-				public Info(List<Integer> sel) {
-					this.sel = sel;
-					ans = 0;
-				}
 				
-				public boolean isUnique() {
-					StringBuffer sb = new StringBuffer();
+				List<Integer> subsets = new ArrayList<Integer>();
+				
+				// 1 << 4 --> 10000 16 1~15 0001~1111 
+				int ans = 0;
+				//bitmasking 
+				for(int i=1; i<(1<<col); ++i) {
+					System.out.println(Integer.toBinaryString(i));
 					
-					for(int i=0; i<row; ++i) {
-						
-						for(Integer t : sel) {
-							sb.append(String.valueOf(t)+RELATION[i][t]);
+					boolean isDup = false;
+					
+					//check unique
+					Set<String> set = new HashSet<>();
+					for(int r=0; r<row; ++r) {
+						StringBuffer sb = new StringBuffer();
+						for(int c=0; c<col; ++c) {
+							if((i & (1<<c)) > 0) {
+								sb.append(strings[r][c]);
+							}
 						}
 						
-						if(set.contains(sb.toString())) {
-							return false;
-						}else {
+						if(!set.contains(sb.toString())){
 							set.add(sb.toString());
-							sb = new StringBuffer();
+							System.out.println("add : " + sb.toString());
+						}else {
+							isDup = false;
+							break;
 						}
 					}
-					//System.out.println(sb.toString());
-					set = null;
-					return true;
-				}
-				
-				public List<Integer> getCurrentSelInfo(){
-					return sel;
-				}
-			
-				public List<Integer> cloneSelInfo(){
-					List<Integer> newCurrentSelInfo = new ArrayList<Integer>();
-					for(int i=0; i<sel.size(); ++i) {
-						newCurrentSelInfo.add(sel.get(i));
+					
+					if(set.size()==row && !isDup) {
+						boolean isNotSubset = true;
+						//check minimulism
+						for(Integer subset : subsets) {
+							System.out.println(subset + " " + (subset&i));
+							if((subset&i)==subset) {
+								isNotSubset = false;
+								break;
+							}
+						}
+						
+						if(isNotSubset) {
+							subsets.add(i);
+							ans++;
+						}
 					}
-					return newCurrentSelInfo;
+					
 				}
 				
+				return ans;
 			}
-		    public int solution(String[][] relation) {
-		    	RELATION = relation.clone();
-		    	
-		        int answer = 0;
-		        
-		        row = relation.length;
-		        col = relation[0].length;
-		        
-		        Queue <Info> q = new LinkedList<Info>();
-		        
-		        for(int i=0; i<col; ++i) {
-		        	List<Integer> sel = new ArrayList<>();
-		        	sel.add(i);
-		        	q.add(new Info(sel));
-		        	//System.out.println("insert q " + sel.size());
-		        }
-		        
-		        while(!q.isEmpty()) {
-		        	Info t = q.poll();
-		        	if(t.isUnique()) {
-		        		
-		        		//최소성 검증
-		        		for(Integer tSelVal : t.sel) {
-		        			if(count[tSelVal] < t.sel.size()) {
-		        				continue;
-		        			}
-		        		}
-		        		
-		        		for(Integer tSelVal : t.sel) {
-		        			count[tSelVal] = t.sel.size();
-		        		}
-		        		
-		        		answer++;
-		        	}else {
-		        		List<Integer> currentSelInfo = t.getCurrentSelInfo();
-		        		int x = currentSelInfo.get(currentSelInfo.size()-1)+1;
-		        		
-		        		for(;x<col; ++x) {
-		        			if(count[x]!=0)continue;
-		        			List<Integer> newSelInfo = t.cloneSelInfo();
-		        			newSelInfo.add(x);
-		        			q.add(new Info(newSelInfo));
-		        			//System.out.println("insert q " + newSelInfo.size());
-		        		}
-		        	}
-		        }
-		        
-		        return answer;
-		    }
+			
 			
 		}
 		
