@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-public class Q1244ÃÖ´ë»ó±İ {
+public class Q1244ìµœëŒ€ìƒê¸ˆ {
 	static Scanner sc = new Scanner(System.in);
 	static int ans = 0, num, changeCnt;
 	static int[] arr;
@@ -91,7 +91,7 @@ public class Q1244ÃÖ´ë»ó±İ {
 	}
 
 	private static void input() {
-		// ÃÖ´ë ÀÚ¸´¼ö 6ÀÚ¸®
+		// ï¿½Ö´ï¿½ ï¿½Ú¸ï¿½ï¿½ï¿½ 6ï¿½Ú¸ï¿½
 		num = sc.nextInt();
 		changeCnt = sc.nextInt();
 	}

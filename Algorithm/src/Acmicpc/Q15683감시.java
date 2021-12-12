@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Q15683°¨½Ã {
+public class Q15683ê°ì‹œ {
 	static Scanner sc = new Scanner(System.in);
 	static final int[][] step = {{-1,0}, {0,1},{1, 0},{0, -1}};
 	static int[][] map;
@@ -105,7 +105,7 @@ public class Q15683°¨½Ã {
 		return i>=0 && i<N && j>=0 && j<M && map[i][j]!=6;
 	}
 
-	// ¹æÇâ Á¤º¸¸¦ ÀÐ¾î¿À´Â ¸Þ¼Òµå
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð¾ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼Òµï¿½
 	private static List<Integer> getDirInfo(int num, int dir){
 		List<Integer> ret = new ArrayList<Integer>();
 		

@@ -3,7 +3,7 @@ package SWExpert;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Q2817ºÎºĞ¼ö¿­ÀÇÇÕ {
+public class Q2817ë¶€ë¶„ìˆ˜ì—´ì˜í•© {
 	static Scanner sc = new Scanner(System.in);
 	static int n, k, ans;
 	static int[] arr;
@@ -26,14 +26,14 @@ public class Q2817ºÎºĞ¼ö¿­ÀÇÇÕ {
 
 	private static void rec(int idx, int sum) {
 		int newSum = arr[idx] + sum; 
-		//ºÎºĞ¼ö¿­ ÇÕÀÌ k°¡ µÉ ¶§
+		//ï¿½ÎºĞ¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ kï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½
 		if(newSum == k) {
 			ans++;
 			return;
 		}
 		
 		for(int i=idx+1; i<n; i++) {
-			//ºÎºĞ¼ö¿­ ÇÕÀÌ k¸¦ ÃÊ°úÇÒ ¶§
+			//ï¿½ÎºĞ¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ kï¿½ï¿½ ï¿½Ê°ï¿½ï¿½ï¿½ ï¿½ï¿½
 			if(newSum+arr[i] > k) {
 				break;
 			}

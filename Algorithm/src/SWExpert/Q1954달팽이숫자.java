@@ -2,7 +2,7 @@ package SWExpert;
 
 import java.util.Scanner;
 
-public class Q1954´ŞÆØÀÌ¼ıÀÚ {
+public class Q1954ë‹¬íŒ½ì´ìˆ«ì {
 
 	static Scanner sc = new Scanner(System.in);
 	static int n;
@@ -31,11 +31,11 @@ public class Q1954´ŞÆØÀÌ¼ıÀÚ {
 	private static void solve() {
 		map = new int[n][n];
 		
-		// ¿ì ÇÏ ÁÂ »ó
+		// ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½
 		rec(0, 0, 0, 1);
 	}
 	private static void rec(int i, int j, int x, int cnt) {
-		//¹üÀ§¿¡ ¹ş¾î³µÀ» ¶§ ¶Ç´Â ÀÌ¹Ì ¼ıÀÚ°¡ ÀÖÀ» ¶§ 
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½î³µï¿½ï¿½ ï¿½ï¿½ ï¿½Ç´ï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ 
 		if(!(inRange(i, j)) || map[i][j]!=0) {
 			i-=step[x][0];
 			j-=step[x][1];

@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Q15686Ä¡Å²¹è´Þ {
+public class Q15686ì¹˜í‚¨ë°°ë‹¬ {
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	static int[][] map;
 	static int N, M, ans;
@@ -30,8 +30,8 @@ public class Q15686Ä¡Å²¹è´Þ {
 
 	private static void solve() {
 		/**
-		 * Ä¡Å²À» ÃÖ´ë M°³ ¼±ÅÃÇÒ ¼ö ÀÖ´Â °æ¿ìÀÇ ¼ö¸¦ dfs·Î ±¸ÇöÇÏ°í 
-		 * M°³°¡ ¼±ÅÃµÇ¾úÀ» ¶§ sum(val)À» ±¸ÇÑ ÈÄ ´ä¾ÈÀ» µµÃâÇÑ´Ù.
+		 * Ä¡Å²ï¿½ï¿½ ï¿½Ö´ï¿½ Mï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ dfsï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ 
+		 * Mï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÃµÇ¾ï¿½ï¿½ï¿½ ï¿½ï¿½ sum(val)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
 		 */
 		
 		rec(0, 0);
@@ -50,10 +50,10 @@ public class Q15686Ä¡Å²¹è´Þ {
 		}
 		
 		for(int i=startIdx; i<food.size(); i++) {
-			//val 1ÀÌ¸é Ä¡Å²ÁýÀÌ ¿î¿µ »óÅÂ
+			//val 1ï¿½Ì¸ï¿½ Ä¡Å²ï¿½ï¿½ï¿½ï¿½ ï¿½î¿µ ï¿½ï¿½ï¿½ï¿½
 			food.get(i).val=1;
 			rec(dep+1, i+1);
-			//val 0ÀÌ¸é Ä¡Å²ÁýÀÌ ÆóÁ¡ »óÅÂ
+			//val 0ï¿½Ì¸ï¿½ Ä¡Å²ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			food.get(i).val=0;
 		}
 		
@@ -76,7 +76,7 @@ public class Q15686Ä¡Å²¹è´Þ {
 		for(IJ h : house) {
 			int tmpVal = Integer.MAX_VALUE;
 			for(IJ f : food) {
-				//ÆóÁ¡ÀÌ¸é °Å¸®°è»êÀ» ÇÏÁö ¾Ê´Â´Ù.
+				//ï¿½ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½ ï¿½Å¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´Â´ï¿½.
 				if(f.val == 0) continue;
 				
 				int tmp = (int)Math.abs(h.i-f.i) + (int)Math.abs(h.j-f.j);
@@ -109,7 +109,7 @@ public class Q15686Ä¡Å²¹è´Þ {
 			for(int j=1; j<=N; j++) {
 				map[i][j] = Integer.parseInt(in[j-1]);
 				
-				//Áý
+				//ï¿½ï¿½
 				if(map[i][j]==1) {
 					house.add(new IJ(i, j));
 				}
